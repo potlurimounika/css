@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style type="text/css">
+            .container 
+            {
+                display:grid;
+                grid-template-columns:[start sidebar-start]3fr[sidebar-end content-start]5fr[content-end ads-start]3fr[end ads-end];
+                grid-template-rows:[start header-start]auto[header-end content-start]auto[content-end footer-start]auto[end footer-end];
+            }
+            .header 
+            {
+                grid-column:start/sidebar-end;
+                grid-row:start/header-end;
+            }
+            .articles
+            {
+                grid-column:start/sidebar-end;
+                grid-row:header-end/footer-start;
+            }
+            .content
+            {
+                grid-column:content-start/content-end;
+                grid-row:content-start/content-end;
+            }
+            .footer
+            {
+                grid-column:start/end;
+                grid-row:footer-start/footer-end;
+            }
+            .ads
+            {
+                grid-column:ads-start/end;
+                grid-row:header-end/footer-start;
+            }
+            </style>
+            </head>
+            <body class="container">
+                <div class="item header">Header</div>
+                <div class="item content">Content</div>
+                <div class="item text-align">Articles</div>
+                <div class="item footer">Footer</div>
+                <div class="item ads">Ads</div>    
+            </div>           
+            </body>
+            </html>
